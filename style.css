@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+/*  */
+.progress {
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  height: 10px;
+  background: #ddd;
+}
+.progress > div {
+  height: 100%;
+  background: blue;
+  transform-origin: left top;
+}
+
+#progress-0 {
+  inset: 5px auto auto 0px;
+}
+#progress-0 > div {
+  background: red;
+}
+
+#progress-1 {
+  inset: 20px auto auto 0px;
+}
+#progress-1 > div {
+  background: blue;
+}
+
+/*  */
+.box {
+  position: fixed;
+  z-index: 1;
+  width: 100px;
+  height: 200px;
+  background: #ddd;
+}
+#box-0 {
+  inset: 100px 120px auto auto;
+}
+#box-1 {
+  inset: 100px 10px auto auto;
+}
+.box > div {
+  width: 100px;
+  height: 100px;
+  color: white;
+}
+#box-0 > div {
+  background: green;
+}
+#box-1 > div {
+  background: rgb(44, 136, 108);
+}
+
+/*  */
+#h-box {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #000;
+  overflow: hidden;
+  overflow-x: auto;
+  position: relative;
+}
+#h-box > div {
+  height: 100px;
+}
+#h-box > div:nth-child(1) {
+  width: 2000px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 135, 167, 1) 0%,
+    rgba(161, 249, 214, 1) 50%,
+    rgba(166, 240, 255, 1) 100%
+  );
+}
+#h-box > div:nth-child(2) {
+  position: sticky;
+  top: 100px;
+  left: 100px;
+  width: 100px;
+  background: #333;
+}
+
+/*  */
+#section-0 {
+  width: 100vw;
+  height: 100vh;
+  background: skyblue;
+}
+#section-1 {
+  width: 50vw;
+  height: 30vh;
+  margin: 35vh auto;
+  position: relative;
+  overflow: hidden;
+  border: 5px solid #ccc;
+}
+#section-1 > div {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 135, 167, 1) 0%,
+    rgba(161, 249, 214, 1) 50%,
+    rgba(166, 240, 255, 1) 100%
+  );
+}
+
+/*  */
+section#h-scroll-container {
+  background: rgb(255, 135, 167);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 135, 167, 1) 0%,
+    rgba(161, 249, 214, 1) 50%,
+    rgba(166, 240, 255, 1) 100%
+  );
+
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  left: 0;
+}
+section#h-scroll-container > ul {
+  list-style: none;
+  width: 500vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5vw;
+  padding: 0 5vw;
+}
+section#h-scroll-container > ul > li {
+  width: 90vw;
+  height: 90vh;
+  background: rgba(0, 0, 0, 0.2);
+}
